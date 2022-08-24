@@ -1,6 +1,6 @@
 terraform {
-  backend "remote" {
-    organization = "hashicorp-learn"
+  cloud {
+    organization = "iamsteveng"
 
     workspaces {
       name = "learn-terraform-pipelines-vault"
@@ -13,7 +13,7 @@ terraform {
     }
   }
 
-  required_version = "~> 0.14"
+  required_version = ">= 1.1.0"
 }
 
 data "terraform_remote_state" "cluster" {
